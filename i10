@@ -1,0 +1,53 @@
+[14:52, 24/11/2023] Pedro Leal: import React from 'react';
+
+function App() {
+  return (
+    <div>
+      <h1>Meu Nome: [Seu Nome]</h1>
+    </div>
+  );
+}
+
+export default App;
+[14:58, 24/11/2023] Pedro Leal: Para atingir esse objetivo, siga os passos abaixo:
+
+1. Crie uma nova pasta chamada `utils` dentro do diretório `src` do seu projeto.
+
+2. Dentro da pasta `utils`, crie um novo arquivo chamado, por exemplo, `mensagem.js`.
+
+3. Adicione o seguinte código ao arquivo `mensagem.js`:
+
+javascript
+function obterMensagem() {
+  return "Olá! Esta é a mensagem da nova função.";
+}
+
+export default obterMensagem;
+
+
+4. Abra o arquivo `src/App.js` e importe a função `obterMensagem` no topo do arquivo:
+
+javascript
+import React from 'react';
+import obterMensagem from './utils/mensagem';
+
+
+5. Dentro do componente `App`, utilize a função `obterMensagem` para obter a mensagem:
+
+javascript
+function App() {
+  const mensagem = obterMensagem();
+
+  return (
+    <div>
+      <h1>{mensagem}</h1>
+    </div>
+  );
+}
+
+
+6. Salve todos os arquivos.
+
+7. Certifique-se de que o servidor de desenvolvimento está em execução (caso contrário, execute `npm start` no terminal no diretório do projeto).
+
+8. Abra o navegador e vá para `http://localhost:3000/`. Você deverá ver uma página com a mensagem retornada pela nova função
